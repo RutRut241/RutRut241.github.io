@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>SANKEY Experiment</title>
+<!-- 
+	Note: style from sankey example code at:
+	https://bl.ocks.org/GerardoFurtado/ff2096ed1aa29bb74fa151a39e9c1387 
+-->
+<style>
+
+.node rect {
+  cursor: move;
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+
+.node text {
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+.link:hover {
+  stroke-opacity: .5;
+}
+
+</style>
+<body>
+	<h1>Emergency Medical Complaints</h1>
+	<h3>CS 6630 : Vis for Data Science • Final Project • Ada McFarlane & Patrice Nicholes</h3>
+	<hr>
+	<h2>Sankey Diagram : Flow of Problem Identity from Initial Complaint to Diagnosis</h2>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="sankey.js"></script>
+	<script src="sankey-params.js"></script>
+	<hr>
+	<h2>Bar Chart : Choose a Complaint to View the Distribution of EMT First Impressions</h2>
+	<p>Select a Complaint to View:</p>
+	<select id="d3-dropdown" 
+		<p>How Many Impressions per Complaint</p>
+		<option selected disabled>Select Complaint</option>
+		<option value=0>Psychiatric Problem</option>
+		<option value=1>Sick Person</option>
+		<option value=2>Falls</option>
+		<option value=3>Breathing Problem</option>
+		<option value=4>Chest Pain</option>
+	</select>
+	<p id="selected-dropdown"></p>
+	
+	<script src="bars.js"></script>
+
+</body>
